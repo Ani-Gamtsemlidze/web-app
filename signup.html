@@ -14,9 +14,9 @@
       </div>
       <div class="log-in-box">
         <div class="heading-title">
-          <h2>Login</h2>
+          <h2>Sign Up</h2>
         </div>
-        <form action="">
+        <form autocomplete="off" action="#">
           <div class="container">
             <label for="uname"></label>
             <input
@@ -26,8 +26,7 @@
               name="uname"
               autocomplete="off"
             />
-
-            <div class="empty-text">
+            <div class="empty-text email-empty">
               <span>Can’t be empty</span>
             </div>
 
@@ -39,19 +38,35 @@
               name="psw"
               autocomplete="off"
             />
-            <div class="password-empty">
+            <div class="password-empty signup-empty">
               <span>Can’t be empty</span>
             </div>
 
+            <label for="psw"></label>
+            <input
+              class="input psw-repeat"
+              type="password"
+              placeholder="Repeat password"
+              name="psw"
+              autocomplete="off"
+            />
+            <div class="repeat-password-empty repeat-psw">
+              <span>Can’t be empty</span>
+            </div>
+
+            <div class="match">
+              <span>Passwords do not match</span>
+            </div>
+
             <button class="login-button" type="submit">
-              Login to your account
+              Create an account
             </button>
           </div>
         </form>
         <div class="account-text">
-          <span class="account">Don’t have an account?</span>
-          <a class="signup-link" href="signup.html"
-            ><span class="signup">Sign Up</span></a
+          <span class="account">Already have an account?</span>
+          <a class="signup-link" href="index.html"
+            ><span class="signup">Login</span></a
           >
         </div>
       </div>

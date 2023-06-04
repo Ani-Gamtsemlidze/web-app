@@ -30,7 +30,7 @@
 .logo {
   position: absolute;
   left: 50%;
-  top: 20px;
+  top: 0px;
   transform: translateX(-50%);
   /* bottom: 91px; */
   width: 32px;
@@ -49,22 +49,25 @@
   width: 400px;
   background-color: #161d2f;
   border-radius: 20px;
-  margin: 8% auto;
+  margin: 5% auto;
 }
 
 .heading-title {
   color: #fff;
   padding: 32px 32px 0;
+  font-size: 25px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .input {
   cursor: pointer;
   transition: 0.4s;
+  font-size: 15px;
   border: none;
   background: unset;
   outline: none;
@@ -72,9 +75,10 @@
   padding: 0 10px 17px;
   margin: 40px 35px 0;
   color: #fff;
+  caret-color: #fc4747;
 }
 
-.input:hover {
+.input:focus {
   border-bottom: 1px solid #fff;
 }
 
@@ -88,14 +92,14 @@
   background-color: #fc4747;
   padding: 14px 96px;
   width: 336px;
-  margin: 40px auto 0;
+  margin: 18px auto 0;
   font-size: 15px;
   color: white;
   border-radius: 6px;
   border: none;
 }
 
-.login-button:hover {
+.login-button:active {
   background-color: #fff;
   color: #161d2f;
 }
@@ -104,6 +108,7 @@
   display: flex;
   justify-content: center;
   padding: 24px 0 32px;
+  align-items: center;
 }
 
 .account {
@@ -121,4 +126,71 @@
 
 .signup-link {
   text-decoration: none;
+}
+
+.match {
+  font-size: 15px;
+  color: #fc4747;
+  margin: 20px 40px 13px;
+  display: none;
+}
+
+.empty-text {
+  position: absolute;
+  right: 50px;
+  top: 21%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #fc4747;
+  display: none;
+}
+
+.password-empty {
+  position: absolute;
+  font-size: 13px;
+  color: #fc4747;
+  right: 50px;
+  display: none;
+  top: 53%;
+}
+
+.repeat-password-empty {
+  position: absolute;
+  font-size: 13px;
+  color: #fc4747;
+  right: 50px;
+  display: none;
+  top: 53%;
+}
+
+.signup-empty {
+  top: 38%;
+}
+
+.repeat-psw {
+  bottom: 33%;
+  top: unset;
+}
+
+.email-empty {
+  top: 17%;
+}
+
+@media only screen and (max-width: 992px) {
+  .login-button {
+    transition: 0.4s;
+    cursor: pointer;
+    background-color: #fc4747;
+    padding: 14px 96px;
+    width: 87%;
+    margin: 18px auto 0;
+    font-size: 11px;
+    color: white;
+    border-radius: 6px;
+    border: none;
+  }
+  .log-in-box {
+    width: 327px;
+    margin: 15% auto;
+  }
 }
