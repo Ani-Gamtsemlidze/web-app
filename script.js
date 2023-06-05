@@ -18,21 +18,27 @@ const validateEmail = (email) => {
 loginButton.addEventListener("click", function (event) {
   if (inputText.value === "") {
     empty.style.display = "block";
+    inputText.style.borderBottomColor = "#FC4747";
     event.preventDefault();
   } else {
     empty.style.display = "none";
+    inputText.style.borderBottomColor = "#FFF";
   }
   if (pswText.value === "") {
     pswEmpty.style.display = "block";
+    pswText.style.borderBottomColor = "#FC4747";
     event.preventDefault();
   } else {
     pswEmpty.style.display = "none";
+    pswText.style.borderBottomColor = "#FFF";
   }
   if (repeatText.value === "") {
     repeatPsw.style.display = "block";
+    repeatText.style.borderBottomColor = "#FC4747";
     event.preventDefault();
   } else {
     repeatPsw.style.display = "none";
+    repeatText.style.borderBottomColor = "#FFF";
   }
 
   if (repeatText.value !== pswText.value) {
@@ -47,6 +53,7 @@ loginButton.addEventListener("click", function (event) {
     event.preventDefault();
 
     empty.style.display = "block";
+    inputText.style.borderBottomColor = "#FC4747";
 
     document.querySelector(".valid-email").textContent =
       "It's not a valid email";
