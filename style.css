@@ -151,7 +151,7 @@
   color: #fc4747;
   right: 50px;
   display: none;
-  top: 53%;
+  top: 55%;
 }
 
 .repeat-password-empty {
@@ -164,11 +164,11 @@
 }
 
 .signup-empty {
-  top: 38%;
+  top: 40%;
 }
 
 .repeat-psw {
-  bottom: 33%;
+  bottom: 28%;
   top: unset;
 }
 
@@ -177,14 +177,17 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .input {
+    margin: 40px 15px 0;
+  }
   .login-button {
     transition: 0.4s;
     cursor: pointer;
     background-color: #fc4747;
-    padding: 14px 96px;
+    padding: 14px 70px;
     width: 87%;
     margin: 18px auto 0;
-    font-size: 11px;
+    font-size: 15px;
     color: white;
     border-radius: 6px;
     border: none;
@@ -192,5 +195,27 @@
   .log-in-box {
     width: 327px;
     margin: 15% auto;
+  }
+
+  .repeat-psw {
+    bottom: 28%;
+  }
+
+  .signup-empty {
+    top: 40%;
+  }
+  .empty-text {
+    top: 23%;
+  }
+
+  .password-empty {
+    top: 55%;
+  }
+  .signup-empty {
+    top: 40%;
+  }
+
+  .email-empty {
+    top: 17%;
   }
 }
