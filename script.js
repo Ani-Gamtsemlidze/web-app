@@ -33,31 +33,36 @@ loginButton.addEventListener("click", function (event) {
     pswText.style.borderBottomColor = "#FFF";
   }
   if (repeatText.value === "") {
-    repeatPsw.style.display = "block";
     repeatText.style.borderBottomColor = "#FC4747";
     event.preventDefault();
   } else {
-    repeatPsw.style.display = "none";
     repeatText.style.borderBottomColor = "#FFF";
   }
 
   if (repeatText.value !== pswText.value) {
-    // document.querySelector(".login-button").style.margin = "0 auto 0";
     document.querySelector(".match").style.display = "block";
+    document.querySelector(".email-empty").style.transform = "translateY(-30%)";
+    repeatText.style.borderBottomColor = "#FC4747";
+    pswText.style.borderBottomColor = "#FC4747";
+
+    document.querySelector(".signup-empty").style.top = "35%";
     event.preventDefault();
   } else {
     document.querySelector(".match").style.display = "none";
+
+    document.querySelector(".email-empty").style.transform = "translateY(-21%)";
+    document.querySelector(".signup-empty").style.top = "41%";
   }
 
   if (!validateEmail(email.value)) {
     event.preventDefault();
-
     empty.style.display = "block";
     inputText.style.borderBottomColor = "#FC4747";
 
     document.querySelector(".valid-email").textContent =
       "It's not a valid email";
   }
+
   if (inputText.value === "") {
     document.querySelector(".valid-email").textContent = "Can't be empty";
     event.preventDefault();

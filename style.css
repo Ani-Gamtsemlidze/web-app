@@ -173,7 +173,8 @@
 }
 
 .email-empty {
-  top: 17%;
+  bottom: 50%;
+  transform: translateY(-20%);
 }
 
 @media only screen and (max-width: 992px) {
@@ -216,6 +217,6 @@
   }
 
   .email-empty {
-    top: 17%;
+    top: 20%;
   }
 }
